@@ -1,0 +1,36 @@
+RENDER DEPLOYMENT CHECKLIST
+============================
+
+Files Required for Deployment:
+✓ app.py (main application file)
+✓ render_requirements.txt (Python dependencies)
+✓ render.yaml (Render configuration) 
+✓ Procfile (process file)
+✓ README.md (documentation)
+✓ DEPLOYMENT_GUIDE.md (deployment instructions)
+
+Quick Deployment Steps:
+1. Create GitHub repository (public)
+2. Upload all project files to GitHub
+3. Sign up at render.com
+4. Create new Web Service
+5. Connect your GitHub repository
+6. Use these settings:
+   - Build Command: pip install -r render_requirements.txt
+   - Start Command: streamlit run app.py --server.port $PORT --server.address 0.0.0.0
+   - Plan: Free
+7. Deploy and wait 3-5 minutes
+8. Access your live app at: https://your-app-name.onrender.com
+
+Important Notes:
+- Free plan sleeps after 15 minutes of inactivity
+- Takes 30-60 seconds to wake up when accessed
+- 750 hours/month usage limit (plenty for personal use)
+- No API keys required - app works out of the box
+
+Your app will have:
+- Home price estimation for 30+ Indian cities
+- Real builders database with contact info
+- Property overview with specifications
+- Virtual tours with room exploration
+- Site visit scheduling feature
